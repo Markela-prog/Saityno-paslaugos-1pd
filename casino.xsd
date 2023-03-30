@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="casino">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:integer" name="id"/>
+                <xs:element name="games">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="game" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:integer" name="id"/>
+                                        <xs:element type="xs:string" name="name"/>
+                                        <xs:element type="xs:string" name="description"/>
+                                        <xs:element type="xs:string" name="rules"/>
+                                        <xs:element type="xs:double" name="minBet"/>
+                                        <xs:element type="xs:double" name="maxBet"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+
+
+                <xs:element name="players">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="player" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:integer" name="id"/>
+                                        <xs:element type="xs:string" name="name"/>
+                                        <xs:element name="account">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:integer" name="id"/>
+                                                    <xs:element type="xs:string" name="email"/>
+                                                    <xs:element type="xs:string" name="password"/>
+                                                    <xs:element type="xs:integer" name="age"/>
+                                                    <xs:element type="xs:double" name="balance"/>
+                                                    <xs:element type="xs:integer" name="credits"/>
+                                                    <xs:element name="transactions">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="transaction" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:integer" name="id"/>
+                                                                            <xs:element type="xs:string" name="transactionType"/>
+                                                                            <xs:element type="xs:double" name="amount"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="bets">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="bet" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:integer" name="id"/>
+                                                                            <xs:element type="xs:double" name="betAmount"/>
+                                                                            <xs:element type="xs:string" name="outcome"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

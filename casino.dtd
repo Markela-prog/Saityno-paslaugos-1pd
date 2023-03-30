@@ -1,0 +1,25 @@
+<!ELEMENT casino (id, games, players)>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT games (game+)>
+        <!ELEMENT game (id, name, description, rules, minBet, maxBet)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT rules (#PCDATA)>
+        <!ELEMENT minBet (#PCDATA)>
+        <!ELEMENT maxBet (#PCDATA)>
+        <!ELEMENT players (player+)>
+        <!ELEMENT player (id, name, account)>
+        <!ELEMENT account (id, email, password, age, balance, credits, transactions, bets)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT password (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        <!ELEMENT balance (#PCDATA)>
+        <!ELEMENT credits (#PCDATA)>
+        <!ELEMENT transactions (transaction+)>
+        <!ELEMENT transaction (id, transactionType, amount)>
+        <!ELEMENT transactionType (#PCDATA)>
+        <!ELEMENT amount (#PCDATA)>
+        <!ELEMENT bets (bet+)>
+        <!ELEMENT bet (id, betAmount, outcome)>
+        <!ELEMENT betAmount (#PCDATA)>
+        <!ELEMENT outcome (#PCDATA)>
